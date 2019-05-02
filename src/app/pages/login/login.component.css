@@ -1,0 +1,28 @@
+.login-form {
+    position: absolute;
+    top: calc( 50% - 112px );
+    left: calc( 50% - 250px );
+    width: 500px;
+    border: solid #e7e7e7 1px;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 20px;
+}
+
+.footer-login {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0px;
+    border: solid #e7e7e7 1px;
+    background-color: #f8f8f8;
+}
+
+.error-field {
+    color: red;
+    font-style: italic;
+}
+
+.footer-login p {
+    margin: 15px 0px;
+}

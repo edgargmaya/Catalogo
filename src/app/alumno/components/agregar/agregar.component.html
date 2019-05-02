@@ -1,0 +1,72 @@
+<div>
+
+  <p-toast></p-toast>
+
+  <form class="login-form" #form="ngForm">
+
+    <div class="form-group">
+      <label for="id-group">Id:</label>
+      <div class="input-group" id="id-group">
+        <span class="input-group-addon" id="basic-addon1">
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+        </span>
+        <input type="text" name="id" required [(ngModel)]="alumno.id" #id="ngModel" placeholder="Identificador"
+          class="form-control">
+      </div>
+      <p class="error-field" *ngIf="id.touched && id.invalid">Campo Requerido</p>
+    </div>
+
+    <div class="form-group">
+      <label for="username-group">Nombre:</label>
+      <div class="input-group" id="nombre-group">
+        <span class="input-group-addon" id="basic-addon1">
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+        </span>
+        <input type="text" name="nombre" required [(ngModel)]="alumno.name" #nombre="ngModel" placeholder="Nombre"
+          class="form-control">
+      </div>
+      <p class="error-field" *ngIf="nombre.touched && nombre.invalid">Campo Requerido</p>
+    </div>
+
+    <div class="form-group">
+      <label for="p-apellido-group">Primer Appelido:</label>
+      <div class="input-group" id="p-apellido-group">
+        <span class="input-group-addon" id="basic-addon1">
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+        </span>
+        <input type="text" name="pApellido" [(ngModel)]="alumno.primerApellido" required #pApellido="ngModel"
+          placeholder="Primer Apellido" class="form-control">
+      </div>
+      <p class="error-field" *ngIf="pApellido.touched && pApellido.invalid">Campo Requerido</p>
+    </div>
+
+    <div class="form-group">
+      <label for="s-apellido-group">Segundo Apellido:</label>
+      <div class="input-group" id="s-apellido-group">
+        <span class="input-group-addon" id="basic-addon1">
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+        </span>
+        <input type="text" name="sApellido" [(ngModel)]="alumno.segundoApellido" required #sApellido="ngModel"
+          placeholder="Segundo Apellido" class="form-control">
+      </div>
+      <p class="error-field" *ngIf="sApellido.touched && sApellido.invalid">Campo Requerido</p>
+    </div>
+
+    <div class="form-group">
+      <label for="id-group">Calificación:</label>
+      <div class="input-group" id="id-group">
+        <span class="input-group-addon" id="basic-addon1">
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+        </span>
+        <input type="text" name="calificacion" required [(ngModel)]="alumno.calificacion" #calificacion="ngModel" placeholder="Calificación"
+          class="form-control">
+      </div>
+      <p class="error-field" *ngIf="calificacion.touched && calificacion.invalid">Campo Requerido</p>
+    </div>
+
+    <button *ngIf="mode" style="margin-top: 10px; margin-right: 10px;" class="waves-effect waves-light btn" (click)="onEnviar(form)">
+      Registrar Alumno
+    </button>
+
+  </form>
+</div>

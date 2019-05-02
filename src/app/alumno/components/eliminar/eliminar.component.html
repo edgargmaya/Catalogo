@@ -1,0 +1,29 @@
+<p-toast></p-toast>
+
+<form class="delete-form" #form="ngForm">
+
+  <div class="form-group">
+    <label for="id-group">Id:</label>
+    <div class="input-group" id="id-group">
+      <span class="input-group-addon" id="basic-addon1">
+        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+      </span>
+      <input type="text" name="id" required [(ngModel)]="searchId" #id="ngModel" placeholder="Identificador"
+        class="form-control">
+    </div>
+    <p class="error-field" *ngIf="id.touched && id.invalid">Campo Requerido</p>
+  </div>
+
+  <button [disabled]="form.invalid" style="margin-top: 10px; margin-right: 10px;" class="waves-effect waves-light btn" (click)="onEnviar(form)">
+    Buscar Alumno
+  </button>
+
+  <button [disabled]="form.invalid || validaAlumno()" style="margin-top: 10px; margin-right: 10px;" class="waves-effect waves-light btn" (click)="onDelete(form)">
+    Eliminar Alumno
+  </button>
+
+</form>
+
+<div *ngIf="alumno">
+  <app-agregar [alumno]="alumno" [mode]="false"> </app-agregar>
+</div>

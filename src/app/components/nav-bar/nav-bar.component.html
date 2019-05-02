@@ -1,0 +1,10 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Curso Angular</a>
+    </div>
+
+    <p-dropdown (onChange)="cambio()" [options]="operations" [(ngModel)]="operation"></p-dropdown>
+
+  </div>
+</nav>

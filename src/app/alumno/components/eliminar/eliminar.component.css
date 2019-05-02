@@ -1,0 +1,13 @@
+.delete-form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 3px;
+    border: solid 1px #e7e7e7;
+}
+
+.error-field {
+    color: red;
+    font-style: italic;
+}
